@@ -487,7 +487,7 @@ export default function MichaelHauckCV() {
       </section>
 
       <footer className="py-12 text-center text-sm text-zinc-500 border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
-        © 2026 Michael Hauck • Switzerland (Git Connected Test)
+        © 2026 Michael Hauck • Switzerland
       </footer>
     </div>
   );
