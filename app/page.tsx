@@ -1,13 +1,14 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Download, Moon, Sun, Menu, X } from 'lucide-react';
+import { Download, Moon, Sun, Menu, X, ExternalLink } from 'lucide-react';
 
 type Lang = "en" | "fr" | "de";
 
 const translations = {
   en: {
-    navAbout: "About", navSkills: "Skills", navFormation: "Formation", navExperience: "Experience", navContact: "Contact",
+    navAbout: "About", navSkills: "Skills", navFormation: "Formation", navExperience: "Experience", 
+    navProjects: "Projects", navContact: "Contact",
     download: "Download CV",
     heroSubtitle: "Accountant & Administration",
     heroBio: "Over 25 years of experience in accounting and administration across various Swiss companies. Trilingual (French, German, English)",
@@ -16,12 +17,14 @@ const translations = {
     skillsTitle: "Key Competencies",
     formationTitle: "Formation",
     experienceTitle: "Professional Experience",
+    projectsTitle: "My Projects & Websites",
     contactTitle: "Contact Me",
     languagesTitle: "Languages",
     formName: "Your Name", formEmail: "Your Email", formMessage: "Your Message", formButton: "Send Message",
   },
   fr: {
-    navAbout: "À propos", navSkills: "Compétences", navFormation: "Formation", navExperience: "Expérience", navContact: "Contact",
+    navAbout: "À propos", navSkills: "Compétences", navFormation: "Formation", navExperience: "Expérience", 
+    navProjects: "Projets", navContact: "Contact",
     download: "Télécharger CV",
     heroSubtitle: "Comptable & Administration",
     heroBio: "Plus de 25 ans d'expérience en comptabilité et administration dans diverses entreprises suisses. Trilingue (Français, Allemand, Anglais)",
@@ -30,12 +33,14 @@ const translations = {
     skillsTitle: "Compétences Clés",
     formationTitle: "Formation",
     experienceTitle: "Expérience Professionnelle",
+    projectsTitle: "Mes Projets & Sites Web",
     contactTitle: "Contactez-moi",
     languagesTitle: "Langues",
     formName: "Votre Nom", formEmail: "Votre Email", formMessage: "Votre Message", formButton: "Envoyer le Message",
   },
   de: {
-    navAbout: "Über mich", navSkills: "Kompetenzen", navFormation: "Ausbildung", navExperience: "Berufserfahrung", navContact: "Kontakt",
+    navAbout: "Über mich", navSkills: "Kompetenzen", navFormation: "Ausbildung", navExperience: "Berufserfahrung", 
+    navProjects: "Projekte", navContact: "Kontakt",
     download: "CV herunterladen",
     heroSubtitle: "Buchhalter & Administration",
     heroBio: "Über 25 Jahre Erfahrung in Buchhaltung und Administration in verschiedenen Schweizer Unternehmen. Dreisprachig (Französisch, Deutsch, Englisch)",
@@ -44,6 +49,7 @@ const translations = {
     skillsTitle: "Schlüsselkompetenzen",
     formationTitle: "Ausbildung",
     experienceTitle: "Berufserfahrung",
+    projectsTitle: "Meine Projekte & Websites",
     contactTitle: "Kontakt",
     languagesTitle: "Sprachen",
     formName: "Ihr Name", formEmail: "Ihre E-Mail", formMessage: "Ihre Nachricht", formButton: "Nachricht senden",
@@ -119,6 +125,45 @@ const experienceData = {
   ]
 };
 
+const projectsData = {
+  en: [
+    { 
+      title: "Couture Martha", 
+      description: "Professional website for sewing, alterations, repairs and bespoke tailoring services in the Geneva, Versoix and Nyon area.", 
+      link: "https://www.couture-martha.ch" 
+    },
+    { 
+      title: "SBB Timetable App", 
+      description: "Contribution to the official Swiss Federal Railways (SBB/CFF) timetable and travel planner application.", 
+      link: "https://www.sbb.ch" 
+    }
+  ],
+  fr: [
+    { 
+      title: "Couture Martha", 
+      description: "Site web professionnel pour retouches, réparations et confection sur mesure à Genève, Versoix et Nyon.", 
+      link: "https://www.couture-martha.ch" 
+    },
+    { 
+      title: "Application Horaire SBB / CFF", 
+      description: "Contribution au développement et à la maintenance de l'application horaire officielle des Chemins de fer fédéraux suisses (CFF/SBB).", 
+      link: "https://www.sbb.ch" 
+    }
+  ],
+  de: [
+    { 
+      title: "Couture Martha", 
+      description: "Professionelle Website für Änderungen, Reparaturen und Maßanfertigungen im Raum Genf, Versoix und Nyon.", 
+      link: "https://www.couture-martha.ch" 
+    },
+    { 
+      title: "SBB Fahrplan App", 
+      description: "Mitarbeit an der offiziellen Fahrplan- und Reiseplaner-App der Schweizerischen Bundesbahnen (SBB/CFF).", 
+      link: "https://www.sbb.ch" 
+    }
+  ]
+};
+
 const slides = [
   '/photos/slide/abacus.jpg',
   '/photos/slide/calculator.jpg',
@@ -136,6 +181,7 @@ export default function MichaelHauckCV() {
   const t = translations[lang];
   const currentFormation = formationData[lang] || formationData.en;
   const currentExperience = experienceData[lang] || experienceData.en;
+  const currentProjects = projectsData[lang] || projectsData.en;
 
   useEffect(() => {
     if (isPaused) return;
@@ -207,6 +253,7 @@ export default function MichaelHauckCV() {
             <button onClick={() => scrollTo("skills")}>Skills</button>
             <button onClick={() => scrollTo("formation")}>Formation</button>
             <button onClick={() => scrollTo("experience")}>Experience</button>
+            <button onClick={() => scrollTo("projects")}>Projects</button>
             <button onClick={() => scrollTo("contact")}>Contact</button>
 
             <button onClick={toggleTheme} className="p-2 rounded-xl hover:bg-zinc-200 dark:hover:bg-zinc-800 transition">
@@ -215,11 +262,7 @@ export default function MichaelHauckCV() {
 
             <div className="flex border border-zinc-300 dark:border-zinc-700 rounded-full overflow-hidden font-medium">
               {(["en", "fr", "de"] as const).map((l) => (
-                <button
-                  key={l}
-                  onClick={() => setLang(l)}
-                  className={`px-5 py-2 transition-all ${lang === l ? "bg-blue-600 text-white" : "hover:bg-zinc-100 dark:hover:bg-zinc-800"}`}
-                >
+                <button key={l} onClick={() => setLang(l)} className={`px-5 py-2 transition-all ${lang === l ? "bg-blue-600 text-white" : "hover:bg-zinc-100 dark:hover:bg-zinc-800"}`}>
                   {l.toUpperCase()}
                 </button>
               ))}
@@ -241,15 +284,7 @@ export default function MichaelHauckCV() {
               <p className="text-xs uppercase tracking-widest text-zinc-500 mb-3 text-center">Language</p>
               <div className="flex border-2 border-blue-600 dark:border-blue-500 rounded-2xl overflow-hidden font-medium">
                 {(["en", "fr", "de"] as const).map((l) => (
-                  <button
-                    key={l}
-                    onClick={() => changeLang(l)}
-                    className={`flex-1 py-4 text-lg font-semibold transition-all ${
-                      lang === l 
-                        ? "bg-blue-600 text-white" 
-                        : "bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300"
-                    }`}
-                  >
+                  <button key={l} onClick={() => changeLang(l)} className={`flex-1 py-4 text-lg font-semibold transition-all ${lang === l ? "bg-blue-600 text-white" : "bg-transparent hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300"}`}>
                     {l.toUpperCase()}
                   </button>
                 ))}
@@ -257,18 +292,18 @@ export default function MichaelHauckCV() {
             </div>
 
             <div className="flex flex-col gap-6 text-lg border-t border-zinc-200 dark:border-zinc-800 pt-6">
-              <button onClick={() => { scrollTo("about"); }} className="text-left py-2">About</button>
-              <button onClick={() => { scrollTo("skills"); }} className="text-left py-2">Skills</button>
-              <button onClick={() => { scrollTo("formation"); }} className="text-left py-2">Formation</button>
-              <button onClick={() => { scrollTo("experience"); }} className="text-left py-2">Experience</button>
-              <button onClick={() => { scrollTo("contact"); }} className="text-left py-2">Contact</button>
+              <button onClick={() => scrollTo("about")} className="text-left py-2">About</button>
+              <button onClick={() => scrollTo("skills")} className="text-left py-2">Skills</button>
+              <button onClick={() => scrollTo("formation")} className="text-left py-2">Formation</button>
+              <button onClick={() => scrollTo("experience")} className="text-left py-2">Experience</button>
+              <button onClick={() => scrollTo("projects")} className="text-left py-2">Projects</button>
+              <button onClick={() => scrollTo("contact")} className="text-left py-2">Contact</button>
             </div>
 
             <div className="flex items-center gap-4 mt-10 pt-6 border-t border-zinc-200 dark:border-zinc-800">
               <button onClick={toggleTheme} className="p-4 rounded-2xl border border-zinc-300 dark:border-zinc-700 flex-1">
                 {isDark ? <Sun size={24} /> : <Moon size={24} />}
               </button>
-
               <button onClick={() => { downloadCV(); setIsMenuOpen(false); }} className="flex-1 flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-2xl font-medium transition">
                 <Download size={20} /> {t.download}
               </button>
@@ -381,7 +416,7 @@ export default function MichaelHauckCV() {
         </div>
       </section>
 
-      {/* Professional Experience - Full 13 entries in all languages */}
+      {/* Professional Experience */}
       <section id="experience" className="py-20 bg-white dark:bg-zinc-900">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16">{t.experienceTitle}</h2>
@@ -410,8 +445,30 @@ export default function MichaelHauckCV() {
         </div>
       </section>
 
+      {/* Projects Section - Your websites */}
+      <section id="projects" className="py-20 bg-zinc-100 dark:bg-zinc-950">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-16">{t.projectsTitle}</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {currentProjects.map((project, index) => (
+              <div key={index} className="bg-white dark:bg-zinc-800 p-8 rounded-2xl shadow hover:shadow-xl transition group">
+                <h3 className="text-2xl font-semibold mb-4 group-hover:text-blue-600 transition">{project.title}</h3>
+                <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">{project.description}</p>
+                <a 
+                  href={project.link} 
+                  target="_blank" 
+                  className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium"
+                >
+                  Visit Website <ExternalLink size={18} />
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact */}
-      <section id="contact" className="py-20 bg-zinc-100 dark:bg-zinc-950">
+      <section id="contact" className="py-20 bg-white dark:bg-zinc-900">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-12">{t.contactTitle}</h2>
           <div className="max-w-[700px] mx-auto bg-white dark:bg-zinc-800 p-10 rounded-2xl shadow">
