@@ -389,7 +389,7 @@ export default function MichaelHauckCV() {
         </div>
       </section>
 
-      {/* Professional Experience - All 13 entries */}
+      {/* Professional Experience */}
       <section id="experience" className="py-20 bg-white dark:bg-zinc-900">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16">{t.experienceTitle}</h2>
@@ -418,7 +418,7 @@ export default function MichaelHauckCV() {
         </div>
       </section>
 
-      {/* Projects Section */}
+      {/* Projects */}
       <section id="projects" className="py-20 bg-zinc-100 dark:bg-zinc-950">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16">{t.projectsTitle}</h2>
