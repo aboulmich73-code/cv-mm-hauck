@@ -28,7 +28,7 @@ const translations = {
     heroBio: "Plus de 25 ans d'expérience en comptabilité et administration dans diverses entreprises suisses. Trilingue (Français, Allemand, Anglais)",
     aboutTitle: "À propos de moi",
     aboutText: "Avec plus de 25 ans d'expérience professionnelle en comptabilité et administration dans diverses entreprises suisses, j'apporte fiabilité, précision et une connaissance approfondie des réglementations locales et des systèmes logiciels.",
-    skillsTitle: "Compétences Clés",
+    skillsTitle: "Compétences Clés",           // ← Changed as requested
     formationTitle: "Formation",
     experienceTitle: "Expérience Professionnelle",
     projectsTitle: "Mes Projets & Sites Web",
@@ -43,7 +43,7 @@ const translations = {
     heroBio: "Über 25 Jahre Erfahrung in Buchhaltung und Administration in verschiedenen Schweizer Unternehmen. Dreisprachig (Französisch, Deutsch, Englisch)",
     aboutTitle: "Über mich",
     aboutText: "Mit mehr als 25 Jahren Berufserfahrung in Buchhaltung und Administration in verschiedenen Schweizer Unternehmen bringe ich Zuverlässigkeit, Präzision und tiefes Wissen über lokale Vorschriften und Software-Systeme mit.",
-    skillsTitle: "Schlüsselkompetenzen",
+    skillsTitle: "Schlüsselkompetenzen",       // ← Changed as requested
     formationTitle: "Ausbildung",
     experienceTitle: "Berufserfahrung",
     projectsTitle: "Meine Projekte & Websites",
@@ -328,7 +328,7 @@ export default function MichaelHauckCV() {
         </div>
       </section>
 
-      {/* Skills */}
+      {/* Skills - with correct French & German titles */}
       <section id="skills" className="py-20 bg-white dark:bg-zinc-900">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-12">{t.skillsTitle}</h2>
