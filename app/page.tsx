@@ -58,89 +58,95 @@ const skillsData = {
     accounting: "Accounting",
     administration: "Administration",
     software: "Software & Tools",
-    accountingBullets: [
-      "General Ledger & Bookkeeping",
-      "Accounts Payable / Receivable",
-      "Monthly & Annual Closings",
-      "VAT Declaration & Payment",
-      "Bank & Cash Reconciliations"
-    ],
-    administrationBullets: [
-      "Family Allowances (APG)",
-      "Source Tax Declarations",
-      "Training Reimbursement Requests",
-      "Occupational Pension (2nd Pillar)",
-      "Payroll Processing"
-    ],
-    softwareBullets: [
-      "SAP S/4HANA",
-      "Winbiz & Cresus",
-      "M-Files, Verifier, CPS",
-      "Microsoft Excel (Advanced)"
-    ]
+    accountingBullets: ["General Ledger & Bookkeeping", "Accounts Payable / Receivable", "Monthly & Annual Closings", "VAT Declaration & Payment", "Bank & Cash Reconciliations"],
+    administrationBullets: ["Family Allowances (APG)", "Source Tax Declarations", "Training Reimbursement Requests", "Occupational Pension (2nd Pillar)", "Payroll Processing"],
+    softwareBullets: ["SAP S/4HANA", "Winbiz & Cresus", "M-Files, Verifier, CPS", "Microsoft Excel (Advanced)"]
   },
   fr: {
     accounting: "Comptabilité",
     administration: "Administration",
     software: "Logiciels & Outils",
-    accountingBullets: [
-      "Grand Livre & Tenue des comptes",
-      "Comptes Fournisseurs / Clients",
-      "Clôtures mensuelles et annuelles",
-      "Déclaration et paiement de la TVA",
-      "Rapprochements bancaires et caisse"
-    ],
-    administrationBullets: [
-      "Allocations familiales (APG)",
-      "Déclarations d'impôt à la source",
-      "Demandes de remboursement de formation",
-      "Prévoyance professionnelle (2ème pilier)",
-      "Traitement de la paie"
-    ],
-    softwareBullets: [
-      "SAP S/4HANA",
-      "Winbiz & Cresus",
-      "M-Files, Verifier, CPS",
-      "Microsoft Excel (Avancé)"
-    ]
+    accountingBullets: ["Grand Livre & Tenue des comptes", "Comptes Fournisseurs / Clients", "Clôtures mensuelles et annuelles", "Déclaration et paiement de la TVA", "Rapprochements bancaires et caisse"],
+    administrationBullets: ["Allocations familiales (APG)", "Déclarations d'impôt à la source", "Demandes de remboursement de formation", "Prévoyance professionnelle (2ème pilier)", "Traitement de la paie"],
+    softwareBullets: ["SAP S/4HANA", "Winbiz & Cresus", "M-Files, Verifier, CPS", "Microsoft Excel (Avancé)"]
   },
   de: {
     accounting: "Buchhaltung",
     administration: "Administration",
     software: "Software & Tools",
-    accountingBullets: [
-      "Hauptbuch & Buchführung",
-      "Kreditoren / Debitoren",
-      "Monats- und Jahresabschlüsse",
-      "MWST-Deklaration & Zahlung",
-      "Bank- und Kassenabstimmungen"
-    ],
-    administrationBullets: [
-      "Familienzulagen (APG)",
-      "Quellensteuererklärungen",
-      "Weiterbildungs-Rückerstattungen",
-      "Berufliche Vorsorge (2. Säule)",
-      "Lohnverarbeitung"
-    ],
-    softwareBullets: [
-      "SAP S/4HANA",
-      "Winbiz & Cresus",
-      "M-Files, Verifier, CPS",
-      "Microsoft Excel (Fortgeschritten)"
-    ]
+    accountingBullets: ["Hauptbuch & Buchführung", "Kreditoren / Debitoren", "Monats- und Jahresabschlüsse", "MWST-Deklaration & Zahlung", "Bank- und Kassenabstimmungen"],
+    administrationBullets: ["Familienzulagen (APG)", "Quellensteuererklärungen", "Weiterbildungs-Rückerstattungen", "Berufliche Vorsorge (2. Säule)", "Lohnverarbeitung"],
+    softwareBullets: ["SAP S/4HANA", "Winbiz & Cresus", "M-Files, Verifier, CPS", "Microsoft Excel (Fortgeschritten)"]
   }
 };
 
-const formationData = { /* unchanged */ 
-  en: [ /* ... */ ],
-  fr: [ /* ... */ ],
-  de: [ /* ... */ ]
+const formationData = {
+  en: [
+    { title: "Payroll Administrator", institution: "Ingesco • Switzerland", period: "11.2025 - 12.2025" },
+    { title: "Federal VET Diploma - Commercial Employee", institution: "Kaufmännischer Verein Basel • Basel", period: "1994 - 1997" },
+    { title: "Maturity / Fachmaturiät", institution: "Fachmaturiätsschule Bâle • Basel", period: "1988 - 1992" },
+    { title: "Secondary School Diploma", institution: "Burgschulhaus • Riehen", period: "1984 - 1988" }
+  ],
+  fr: [
+    { title: "Gestionnaire de salaire", institution: "Ingesco • Suisse", period: "12.2025" },
+    { title: "CFC d'employé de commerce", institution: "Kaufmännischer Verein Basel • Bâle", period: "1994 - 1997" },
+    { title: "Maturité / Fachmaturiät", institution: "Fachmaturiätsschule Bâle • Bâle", period: "1988 - 1992" },
+    { title: "Diplôme de l'école secondaire", institution: "Burgschulhaus • Riehen", period: "1984 - 1988" }
+  ],
+  de: [
+    { title: "Lohnbuchhalter", institution: "Ingesco • Schweiz", period: "11.2025 - 12.2025" },
+    { title: "Eidg. Fähigkeitszeugnis Kaufmann", institution: "Kaufmännischer Verein Basel • Basel", period: "1994 - 1997" },
+    { title: "Maturiät / Fachmaturiät", institution: "Fachmaturiätsschule Basel • Basel", period: "1988 - 1992" },
+    { title: "Sekundarschulabschluss", institution: "Burgschulhaus • Riehen", period: "1984 - 1988" }
+  ]
 };
 
-const experienceData = { /* full 13 entries - unchanged from previous correct version */ 
-  en: [ /* ... */ ],
-  fr: [ /* ... */ ],
-  de: [ /* ... */ ]
+const experienceData = {
+  en: [
+    { title: "Accounts Payable Accountant / Administrative Assistant", company: "Interiman Group, Renens", period: "01.2023 – 02.2025", bullets: ["Enter supplier invoices in Verifier and manage invoice processing via M-Files and CPS", "Manage family allowance requests and Swiss Army loss of earnings compensation (APG)", "Handle source tax declaration for Ticino using easytemp and Ifonte", "Record Tax Residence Certificate (ARF) and configure withholding tax", "Process Temptraining training reimbursement requests"] },
+    { title: "Data Correction (Temporary Contract)", company: "Assura assurance, Lausanne", period: "07.2022 – 12.2022", bullets: ["Correct and validate insurance data to ensure system accuracy", "Analyze complex datasets"] },
+    { title: "Financial Assistant", company: "Burger King, Nyon", period: "11.2020 – 04.2021", bullets: ["Manage accounts payable, intercompany accounting and bank reconciliations", "Execute bank payments and manage collection reminders"] },
+    { title: "General Accounting Intern", company: "Ouistart, Geneva", period: "01.2020 – 07.2020", bullets: ["Manage the full invoice posting cycle for receivables and payables", "Prepare and process payroll, social contributions and operating expenses", "Perform VAT calculation and payment", "Contribute to quarterly and annual closings"] },
+    { title: "Accounts Payable Accountant (Fixed-term)", company: "Touring Club Suisse, Vernier", period: "12.2017 – 02.2018", bullets: ["Accurately enter incoming invoices using SAP S/4HANA", "Handle incoming mail processing"] },
+    { title: "Accountant", company: "Dinifan, Les Acacias", period: "03.2011 – 03.2017", bullets: ["Manage accounts payable, receivable and general accounting including monthly closings", "Prepare invoicing, credit notes and client reminders", "Prepare electronic payments in DTA format and reconcile bank and postal accounts", "Maintain client contact in French, German and English"] },
+    { title: "Accountant (Fixed-term)", company: "DHL Suisse, Geneva", period: "10.2010 – 01.2011", bullets: ["Responsible for cash collection from customers", "Extract and perform detailed analysis of customer accounts", "Conduct targeted telephone reminders"] },
+    { title: "Accountant", company: "Primacy Relocation, Geneva", period: "02.2008 – 01.2010", bullets: ["Accurately post bank entries into the accounting system", "Manage invoicing and collection of customer payments", "Perform monthly account reconciliations"] },
+    { title: "Data Entry (Fixed-term)", company: "Cotecna, Geneva", period: "10.2007", bullets: ["Perform fast and accurate entry of large volumes of data"] },
+    { title: "Collections and Receipts Accountant", company: "Europe, Bussigny", period: "06.2006 – 04.2007", bullets: ["Record incoming customer payments and manage returned payment processing", "Monitor customer accounts with overdue payments", "Generate reminders and produce detailed overdue reports"] },
+    { title: "Assistant Accountant", company: "SGA Affichage, Geneva", period: "06.2004 – 10.2005", bullets: ["Manage receivables processing, including issuing and following up on reminders", "Maintain CCP accounts, bank accounts and cash, prepare weekly cash position reports", "Handle payment traffic and processing of checks and Visa cards"] },
+    { title: "Assistant Accountant (Fixed-term)", company: "Pharmacie Principale, Geneva", period: "12.2003 – 04.2004", bullets: ["Post and reconcile cash and card payments", "Manage supplier invoices and reminders", "Optimize internal procedures and client billing"] },
+    { title: "Assistant Accountant – Occupational Pension (Fixed-term)", company: "Providentia Assurances, Nyon", period: "04.2000 – 05.2002", bullets: ["Post insurance premiums and manage receipts and disbursements", "Monitor occupational pension benefits", "Perform monthly reconciliations"] }
+  ],
+  fr: [
+    { title: "Comptable Fournisseurs / Assistant Administratif", company: "Interiman Group, Renens", period: "01.2023 – 02.2025", bullets: ["Saisie des factures fournisseurs dans Verifier et gestion via M-Files et CPS", "Gestion des allocations familiales et APG", "Déclaration d'impôt à la source pour le Tessin", "Enregistrement du certificat de résidence fiscale (ARF)", "Traitement des demandes de remboursement Temptraining"] },
+    { title: "Correction de Données (Contrat Temporaire)", company: "Assura assurance, Lausanne", period: "07.2022 – 12.2022", bullets: ["Correction et validation des données d'assurance complexes", "Analyse de jeux de données complexes"] },
+    { title: "Assistant Financier", company: "Burger King, Nyon", period: "11.2020 – 04.2021", bullets: ["Gestion des comptes fournisseurs et rapprochements bancaires", "Exécution des paiements et rappels"] },
+    { title: "Stagiaire en Comptabilité Générale", company: "Ouistart, Geneva", period: "01.2020 – 07.2020", bullets: ["Cycle complet de saisie des factures", "Préparation de la paie et charges sociales", "Calcul et paiement de la TVA", "Participation aux clôtures trimestrielles et annuelles"] },
+    { title: "Comptable Fournisseurs (Durée Déterminée)", company: "Touring Club Suisse, Vernier", period: "12.2017 – 02.2018", bullets: ["Saisie précise des factures entrantes avec SAP S/4HANA", "Traitement du courrier entrant"] },
+    { title: "Comptable", company: "Dinifan, Les Acacias", period: "03.2011 – 03.2017", bullets: ["Gestion complète de la comptabilité fournisseurs, clients et générale", "Préparation des factures, avoirs et rappels", "Paiements électroniques en format DTA", "Contact clients en français, allemand et anglais"] },
+    { title: "Comptable (Durée Déterminée)", company: "DHL Suisse, Geneva", period: "10.2010 – 01.2011", bullets: ["Recouvrement des clients", "Analyse détaillée des comptes clients", "Rappels téléphoniques ciblés"] },
+    { title: "Comptable", company: "Primacy Relocation, Geneva", period: "02.2008 – 01.2010", bullets: ["Saisie des écritures bancaires", "Facturation et recouvrement clients", "Rapprochements mensuels"] },
+    { title: "Saisie de Données (Durée Déterminée)", company: "Cotecna, Geneva", period: "10.2007", bullets: ["Saisie rapide et précise de grands volumes de données"] },
+    { title: "Comptable Recouvrements et Encaissements", company: "Europe, Bussigny", period: "06.2006 – 04.2007", bullets: ["Enregistrement des paiements clients", "Suivi des comptes en retard", "Génération de rappels et rapports"] },
+    { title: "Assistant Comptable", company: "SGA Affichage, Geneva", period: "06.2004 – 10.2005", bullets: ["Suivi des créances et rappels", "Gestion des comptes CCP, banque et caisse", "Rapports hebdomadaires de trésorerie"] },
+    { title: "Assistant Comptable (Durée Déterminée)", company: "Pharmacie Principale, Geneva", period: "12.2003 – 04.2004", bullets: ["Rapprochement caisse et cartes", "Gestion des factures fournisseurs et rappels"] },
+    { title: "Assistant Comptable – Prévoyance Professionnelle (Durée Déterminée)", company: "Providentia Assurances, Nyon", period: "04.2000 – 05.2002", bullets: ["Affiliation des primes d'assurance", "Suivi des prestations de prévoyance", "Rapprochements mensuels"] }
+  ],
+  de: [
+    { title: "Kreditorenbuchhalter / Administrativer Mitarbeiter", company: "Interiman Group, Renens", period: "01.2023 – 02.2025", bullets: ["Verarbeitung von Lieferantenrechnungen in Verifier und Freigabe via M-Files und CPS", "Bearbeitung von Familienzulagen und APG", "Quellensteuererklärungen (Tessin)", "Erfassung von Wohnsitzbescheinigungen", "Bearbeitung von Weiterbildungs-Rückerstattungen"] },
+    { title: "Datenkorrektur (Befristet)", company: "Assura assurance, Lausanne", period: "07.2022 – 12.2022", bullets: ["Korrektur und Validierung komplexer Versicherungsdaten", "Analyse komplexer Datensätze"] },
+    { title: "Finanzassistent", company: "Burger King, Nyon", period: "11.2020 – 04.2021", bullets: ["Kreditorenbuchhaltung und Bankabstimmungen", "Ausführung von Bankzahlungen und Mahnungen"] },
+    { title: "Praktikant in der Finanzbuchhaltung", company: "Ouistart, Geneva", period: "01.2020 – 07.2020", bullets: ["Vollständiger Rechnungszyklus", "Lohn- und Sozialabgabenverarbeitung", "MWST-Berechnung und Zahlung", "Mitwirkung bei Abschlüssen"] },
+    { title: "Kreditorenbuchhalter (Befristet)", company: "Touring Club Suisse, Vernier", period: "12.2017 – 02.2018", bullets: ["Rechnungserfassung in SAP S/4HANA", "Bearbeitung des Posteingangs"] },
+    { title: "Buchhalter", company: "Dinifan, Les Acacias", period: "03.2011 – 03.2017", bullets: ["Vollständige Buchhaltung inkl. Monatsabschlüsse", "Rechnungsstellung und Mahnwesen", "Elektronische Zahlungen im DTA-Format", "Kundenbetreuung in drei Sprachen"] },
+    { title: "Buchhalter (Befristet)", company: "DHL Suisse, Geneva", period: "10.2010 – 01.2011", bullets: ["Inkasso und Kundenanalyse", "Telefonische Mahnungen"] },
+    { title: "Buchhalter", company: "Primacy Relocation, Geneva", period: "02.2008 – 01.2010", bullets: ["Bankbuchungen und Abstimmungen"] },
+    { title: "Datenerfassung (Befristet)", company: "Cotecna, Geneva", period: "10.2007", bullets: ["Schnelle und genaue Dateneingabe großer Volumen"] },
+    { title: "Inkasso- und Zahlungsbuchhalter", company: "Europe, Bussigny", period: "06.2006 – 04.2007", bullets: ["Verbuchung von Zahlungseingängen", "Überwachung überfälliger Konten", "Erstellung von Mahnberichten"] },
+    { title: "Buchhaltungsassistent", company: "SGA Affichage, Geneva", period: "06.2004 – 10.2005", bullets: ["Forderungsmanagement und Mahnwesen", "Führung von CCP-, Bank- und Kassenkonten", "Wöchentliche Liquiditätsberichte"] },
+    { title: "Buchhaltungsassistent (Befristet)", company: "Pharmacie Principale, Geneva", period: "12.2003 – 04.2004", bullets: ["Kassen- und Kartenzahlungsabstimmung", "Lieferantenrechnungen und Mahnungen"] },
+    { title: "Buchhaltungsassistent – Berufliche Vorsorge (Befristet)", company: "Providentia Assurances, Nyon", period: "04.2000 – 05.2002", bullets: ["Prämienverbuchung und Leistungsüberwachung", "Monatliche Abstimmungen"] }
+  ]
 };
 
 const projectsData = {
@@ -238,7 +244,7 @@ export default function MichaelHauckCV() {
 
   return (
     <div className={`min-h-screen ${isDark ? "dark" : ""}`}>
-      {/* Navbar - same as before */}
+      {/* Navbar */}
       <nav className="sticky top-0 z-50 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800">
         <div className="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
           <div className="font-bold text-2xl">Michael Hauck</div>
@@ -307,7 +313,7 @@ export default function MichaelHauckCV() {
         )}
       </nav>
 
-      {/* Hero - unchanged */}
+      {/* Hero */}
       <section 
         className="relative min-h-screen bg-black flex items-center text-white overflow-hidden"
         onMouseEnter={() => setIsPaused(true)}
@@ -382,12 +388,95 @@ export default function MichaelHauckCV() {
         </div>
       </section>
 
-      {/* Formation, Experience, Projects, Contact, Footer - unchanged from previous correct version */}
-      {/* (You can keep the rest from your current file or copy from my previous full version) */}
+      {/* Formation */}
+      <section id="formation" className="py-20 bg-zinc-100 dark:bg-zinc-950">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-12">{t.formationTitle}</h2>
+          <div className="space-y-12">
+            {currentFormation.map((item, index) => (
+              <div key={index} className="flex flex-col md:flex-row md:justify-between gap-6 border-b pb-8 last:border-none">
+                <div>
+                  <h3 className="text-xl font-semibold">{item.title}</h3>
+                  <p className="text-zinc-600 dark:text-zinc-400">{item.institution}</p>
+                </div>
+                <div className="text-right text-sm text-zinc-500 font-mono">{item.period}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      {/* For brevity, I'm showing only the changed Skills section above. 
-      Keep the Formation, Experience, Projects, Contact and Footer sections exactly as in the last full file I gave you. */}
+      {/* Professional Experience */}
+      <section id="experience" className="py-20 bg-white dark:bg-zinc-900">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-16">{t.experienceTitle}</h2>
+          <div className="relative max-w-4xl mx-auto">
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-zinc-300 dark:bg-zinc-700"></div>
+            <div className="space-y-16">
+              {currentExperience.map((job, index) => (
+                <div key={index} className="relative pl-20">
+                  <div className="absolute left-6 w-5 h-5 bg-blue-600 rounded-full border-4 border-white dark:border-zinc-950"></div>
+                  <div className="flex flex-col md:flex-row md:justify-between mb-4">
+                    <div>
+                      <h3 className="text-xl font-semibold">{job.title}</h3>
+                      <p className="text-blue-600 font-medium">{job.company}</p>
+                    </div>
+                    <p className="text-base md:text-lg font-semibold text-zinc-600 dark:text-zinc-400 whitespace-nowrap mt-1 md:mt-0">
+                      {job.period}
+                    </p>
+                  </div>
+                  <ul className="list-disc pl-6 space-y-2 text-zinc-600 dark:text-zinc-400">
+                    {job.bullets.map((bullet, i) => <li key={i}>{bullet}</li>)}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
+      {/* Projects */}
+      <section id="projects" className="py-20 bg-zinc-100 dark:bg-zinc-950">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-16">{t.projectsTitle}</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {currentProjects.map((project, index) => (
+              <div key={index} className="bg-white dark:bg-zinc-800 p-8 rounded-2xl shadow hover:shadow-xl transition group">
+                <h3 className="text-2xl font-semibold mb-4 group-hover:text-blue-600 transition">{project.title}</h3>
+                <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">{project.description}</p>
+                <a 
+                  href={project.link} 
+                  target="_blank" 
+                  className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium"
+                >
+                  Visit Website <ExternalLink size={18} />
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="py-20 bg-white dark:bg-zinc-900">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-12">{t.contactTitle}</h2>
+          <div className="max-w-[700px] mx-auto bg-white dark:bg-zinc-800 p-10 rounded-2xl shadow">
+            <form action="https://formspree.io/f/xgopoqjg" method="POST">
+              <input type="text" name="name" placeholder={t.formName} required className="w-full px-5 py-4 mb-4 border border-gray-300 dark:border-zinc-600 rounded-xl focus:border-blue-500 dark:bg-zinc-900" />
+              <input type="email" name="email" placeholder={t.formEmail} required className="w-full px-5 py-4 mb-4 border border-gray-300 dark:border-zinc-600 rounded-xl focus:border-blue-500 dark:bg-zinc-900" />
+              <textarea name="message" rows={6} placeholder={t.formMessage} required className="w-full px-5 py-4 mb-6 border border-gray-300 dark:border-zinc-600 rounded-xl focus:border-blue-500 dark:bg-zinc-900 resize-y min-h-[160px]" />
+              <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl font-semibold text-lg transition-colors">
+                {t.formButton}
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer className="py-12 text-center text-sm text-zinc-500 border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
+        © 2026 Michael Hauck • Switzerland
+      </footer>
     </div>
   );
 }
