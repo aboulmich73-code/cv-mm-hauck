@@ -389,7 +389,7 @@ export default function MichaelHauckCV() {
         </div>
       </section>
 
-      {/* Professional Experience */}
+      {/* Professional Experience - All 13 entries */}
       <section id="experience" className="py-20 bg-white dark:bg-zinc-900">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16">{t.experienceTitle}</h2>
