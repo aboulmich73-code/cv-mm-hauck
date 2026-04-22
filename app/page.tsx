@@ -73,33 +73,33 @@ const formationData = {
 
 const experienceData = {
   en: [
-    { title: "Accounts Payable Accountant / Administrative Assistant", company: "Interiman Group, Renens", period: "01.2023 – 02.2025", bullets: ["Processed supplier invoices in Verifier and managed approval via M-Files and CPS", "Managed family allowance requests and APG", "Handled source tax declarations (Ticino)", "Recorded Tax Residence Certificate", "Processed training reimbursement requests"] },
-    { title: "Data Correction (Temporary Contract)", company: "Assura assurance, Lausanne", period: "07.2022 – 12.2022", bullets: ["Corrected and validated complex insurance data", "Analyzed complex datasets"] },
-    { title: "Financial Assistant", company: "Burger King, Nyon", period: "11.2020 – 04.2021", bullets: ["Managed accounts payable and bank reconciliations", "Executed bank payments and reminders"] },
-    { title: "General Accounting Intern", company: "Ouistart, Geneva", period: "01.2020 – 07.2020", bullets: ["Full invoice cycle", "Payroll and VAT processing", "Quarterly and annual closings"] },
-    { title: "Accounts Payable Accountant (Fixed-term)", company: "Touring Club Suisse, Vernier", period: "12.2017 – 02.2018", bullets: ["Invoice entry in SAP S/4HANA", "Mail processing"] },
-    { title: "Accountant", company: "Dinifan, Les Acacias", period: "03.2011 – 03.2017", bullets: ["Full accounting including monthly closings", "Invoicing and reminders", "DTA payments and reconciliations"] },
-    { title: "Accountant (Fixed-term)", company: "DHL Suisse, Geneva", period: "10.2010 – 01.2011", bullets: ["Cash collection", "Customer account analysis", "Targeted reminders"] },
-    { title: "Accountant", company: "Primacy Relocation, Geneva", period: "02.2008 – 01.2010", bullets: ["Bank postings and reconciliations", "Invoicing and collections"] },
-    { title: "Data Entry (Fixed-term)", company: "Cotecna, Geneva", period: "10.2007", bullets: ["Fast and accurate data entry"] },
-    { title: "Collections and Receipts Accountant", company: "Europe, Bussigny", period: "06.2006 – 04.2007", bullets: ["Payment recording and monitoring", "Overdue reports"] },
-    { title: "Assistant Accountant", company: "SGA Affichage, Geneva", period: "06.2004 – 10.2005", bullets: ["Receivables and reminders", "Bank and cash management"] },
-    { title: "Assistant Accountant (Fixed-term)", company: "Pharmacie Principale, Geneva", period: "12.2003 – 04.2004", bullets: ["Cash reconciliation and supplier invoices"] },
-    { title: "Assistant Accountant – Occupational Pension (Fixed-term)", company: "Providentia Assurances, Nyon", period: "04.2000 – 05.2002", bullets: ["Insurance premium posting", "Pension benefits monitoring", "Monthly reconciliations"] }
+    { title: "Accounts Payable Accountant / Administrative Assistant", company: "Interiman Group, Renens", period: "01.2023 – 02.2025", bullets: ["Enter supplier invoices in Verifier and manage invoice processing via M-Files and CPS", "Manage family allowance requests and Swiss Army loss of earnings compensation (APG)", "Handle source tax declaration for Ticino using easytemp and Ifonte", "Record Tax Residence Certificate (ARF) and configure withholding tax", "Process Temptraining training reimbursement requests"] },
+    { title: "Data Correction (Temporary Contract)", company: "Assura assurance, Lausanne", period: "07.2022 – 12.2022", bullets: ["Correct and validate insurance data to ensure system accuracy", "Analyze complex datasets"] },
+    { title: "Financial Assistant", company: "Burger King, Nyon", period: "11.2020 – 04.2021", bullets: ["Manage accounts payable, intercompany accounting and bank reconciliations", "Execute bank payments and manage collection reminders"] },
+    { title: "General Accounting Intern", company: "Ouistart, Geneva", period: "01.2020 – 07.2020", bullets: ["Manage the full invoice posting cycle for receivables and payables", "Prepare and process payroll, social contributions and operating expenses", "Perform VAT calculation and payment", "Contribute to quarterly and annual closings"] },
+    { title: "Accounts Payable Accountant (Fixed-term)", company: "Touring Club Suisse, Vernier", period: "12.2017 – 02.2018", bullets: ["Accurately enter incoming invoices using SAP S/4HANA", "Handle incoming mail processing"] },
+    { title: "Accountant", company: "Dinifan, Les Acacias", period: "03.2011 – 03.2017", bullets: ["Manage accounts payable, receivable and general accounting including monthly closings", "Prepare invoicing, credit notes and client reminders", "Prepare electronic payments in DTA format and reconcile bank and postal accounts", "Maintain client contact in French, German and English"] },
+    { title: "Accountant (Fixed-term)", company: "DHL Suisse, Geneva", period: "10.2010 – 01.2011", bullets: ["Responsible for cash collection from customers", "Extract and perform detailed analysis of customer accounts", "Conduct targeted telephone reminders"] },
+    { title: "Accountant", company: "Primacy Relocation, Geneva", period: "02.2008 – 01.2010", bullets: ["Accurately post bank entries into the accounting system", "Manage invoicing and collection of customer payments", "Perform monthly account reconciliations"] },
+    { title: "Data Entry (Fixed-term)", company: "Cotecna, Geneva", period: "10.2007", bullets: ["Perform fast and accurate entry of large volumes of data"] },
+    { title: "Collections and Receipts Accountant", company: "Europe, Bussigny", period: "06.2006 – 04.2007", bullets: ["Record incoming customer payments and manage returned payment processing", "Monitor customer accounts with overdue payments", "Generate reminders and produce detailed overdue reports"] },
+    { title: "Assistant Accountant", company: "SGA Affichage, Geneva", period: "06.2004 – 10.2005", bullets: ["Manage receivables processing, including issuing and following up on reminders", "Maintain CCP accounts, bank accounts and cash, prepare weekly cash position reports", "Handle payment traffic and processing of checks and Visa cards"] },
+    { title: "Assistant Accountant (Fixed-term)", company: "Pharmacie Principale, Geneva", period: "12.2003 – 04.2004", bullets: ["Post and reconcile cash and card payments", "Manage supplier invoices and reminders", "Optimize internal procedures and client billing"] },
+    { title: "Assistant Accountant – Occupational Pension (Fixed-term)", company: "Providentia Assurances, Nyon", period: "04.2000 – 05.2002", bullets: ["Post insurance premiums and manage receipts and disbursements", "Monitor occupational pension benefits", "Perform monthly reconciliations"] }
   ],
   fr: [
-    { title: "Comptable Fournisseurs / Assistant Administratif", company: "Interiman Group, Renens", period: "01.2023 – 02.2025", bullets: ["Traitement des factures fournisseurs dans Verifier et approbation via M-Files et CPS", "Gestion des allocations familiales et APG", "Déclarations d'impôt à la source (Tessin)", "Enregistrement des certificats de résidence fiscale", "Demandes de remboursement de formation via Temptraining"] },
-    { title: "Correction de Données (Contrat Temporaire)", company: "Assura assurance, Lausanne", period: "07.2022 – 12.2022", bullets: ["Correction et validation de données d'assurance complexes", "Analyse de jeux de données complexes"] },
+    { title: "Comptable Fournisseurs / Assistant Administratif", company: "Interiman Group, Renens", period: "01.2023 – 02.2025", bullets: ["Saisie des factures fournisseurs dans Verifier et gestion via M-Files et CPS", "Gestion des allocations familiales et APG", "Déclaration d'impôt à la source pour le Tessin", "Enregistrement du certificat de résidence fiscale (ARF)", "Traitement des demandes de remboursement Temptraining"] },
+    { title: "Correction de Données (Contrat Temporaire)", company: "Assura assurance, Lausanne", period: "07.2022 – 12.2022", bullets: ["Correction et validation des données d'assurance complexes", "Analyse de jeux de données complexes"] },
     { title: "Assistant Financier", company: "Burger King, Nyon", period: "11.2020 – 04.2021", bullets: ["Gestion des comptes fournisseurs et rapprochements bancaires", "Exécution des paiements et rappels"] },
-    { title: "Stagiaire en Comptabilité Générale", company: "Ouistart, Geneva", period: "01.2020 – 07.2020", bullets: ["Cycle complet des factures", "Préparation de la paie, charges sociales et frais", "Calcul et paiement de la TVA", "Participation aux clôtures trimestrielles et annuelles"] },
-    { title: "Comptable Fournisseurs (Durée Déterminée)", company: "Touring Club Suisse, Vernier", period: "12.2017 – 02.2018", bullets: ["Saisie des factures entrantes dans SAP S/4HANA", "Traitement du courrier entrant"] },
+    { title: "Stagiaire en Comptabilité Générale", company: "Ouistart, Geneva", period: "01.2020 – 07.2020", bullets: ["Cycle complet de saisie des factures", "Préparation de la paie et charges sociales", "Calcul et paiement de la TVA", "Participation aux clôtures trimestrielles et annuelles"] },
+    { title: "Comptable Fournisseurs (Durée Déterminée)", company: "Touring Club Suisse, Vernier", period: "12.2017 – 02.2018", bullets: ["Saisie précise des factures entrantes avec SAP S/4HANA", "Traitement du courrier entrant"] },
     { title: "Comptable", company: "Dinifan, Les Acacias", period: "03.2011 – 03.2017", bullets: ["Gestion complète de la comptabilité fournisseurs, clients et générale", "Préparation des factures, avoirs et rappels", "Paiements électroniques en format DTA", "Contact clients en français, allemand et anglais"] },
     { title: "Comptable (Durée Déterminée)", company: "DHL Suisse, Geneva", period: "10.2010 – 01.2011", bullets: ["Recouvrement des clients", "Analyse détaillée des comptes clients", "Rappels téléphoniques ciblés"] },
     { title: "Comptable", company: "Primacy Relocation, Geneva", period: "02.2008 – 01.2010", bullets: ["Saisie des écritures bancaires", "Facturation et recouvrement clients", "Rapprochements mensuels"] },
     { title: "Saisie de Données (Durée Déterminée)", company: "Cotecna, Geneva", period: "10.2007", bullets: ["Saisie rapide et précise de grands volumes de données"] },
-    { title: "Comptable Recouvrements et Encaissements", company: "Europe, Bussigny", period: "06.2006 – 04.2007", bullets: ["Enregistrement des paiements clients et gestion des retours", "Suivi des comptes en retard", "Génération de rappels et rapports"] },
+    { title: "Comptable Recouvrements et Encaissements", company: "Europe, Bussigny", period: "06.2006 – 04.2007", bullets: ["Enregistrement des paiements clients", "Suivi des comptes en retard", "Génération de rappels et rapports"] },
     { title: "Assistant Comptable", company: "SGA Affichage, Geneva", period: "06.2004 – 10.2005", bullets: ["Suivi des créances et rappels", "Gestion des comptes CCP, banque et caisse", "Rapports hebdomadaires de trésorerie"] },
-    { title: "Assistant Comptable (Durée Déterminée)", company: "Pharmacie Principale, Geneva", period: "12.2003 – 04.2004", bullets: ["Rapprochement caisse et cartes; gestion des factures fournisseurs et rappels"] },
+    { title: "Assistant Comptable (Durée Déterminée)", company: "Pharmacie Principale, Geneva", period: "12.2003 – 04.2004", bullets: ["Rapprochement caisse et cartes", "Gestion des factures fournisseurs et rappels"] },
     { title: "Assistant Comptable – Prévoyance Professionnelle (Durée Déterminée)", company: "Providentia Assurances, Nyon", period: "04.2000 – 05.2002", bullets: ["Affiliation des primes d'assurance", "Suivi des prestations de prévoyance", "Rapprochements mensuels"] }
   ],
   de: [
@@ -277,7 +277,7 @@ export default function MichaelHauckCV() {
         )}
       </nav>
 
-      {/* Hero Section */}
+      {/* Hero */}
       <section 
         className="relative min-h-screen bg-black flex items-center text-white overflow-hidden"
         onMouseEnter={() => setIsPaused(true)}
@@ -320,11 +320,10 @@ export default function MichaelHauckCV() {
         </div>
       </section>
 
-      {/* Key Competencies */}
+      {/* Skills */}
       <section id="skills" className="py-20 bg-white dark:bg-zinc-900">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-12">{t.skillsTitle}</h2>
-
           <div className="grid md:grid-cols-3 gap-10">
             <div>
               <h3 className="font-semibold text-2xl mb-6 text-blue-600">Accounting</h3>
@@ -382,7 +381,7 @@ export default function MichaelHauckCV() {
         </div>
       </section>
 
-      {/* Professional Experience - All 13 experiences */}
+      {/* All Experiences */}
       <section id="experience" className="py-20 bg-white dark:bg-zinc-900">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16">{t.experienceTitle}</h2>
