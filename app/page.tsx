@@ -7,8 +7,7 @@ type Lang = "en" | "fr" | "de";
 
 const translations = {
   en: {
-    navAbout: "About", navSkills: "Skills", navFormation: "Formation", navExperience: "Experience", 
-    navProjects: "Projects", navContact: "Contact",
+    navAbout: "About", navSkills: "Skills", navFormation: "Formation", navExperience: "Experience", navProjects: "Projects", navContact: "Contact",
     download: "Download CV",
     heroSubtitle: "Accountant & Administration",
     heroBio: "Over 25 years of experience in accounting and administration across various Swiss companies. Trilingual (French, German, English)",
@@ -23,8 +22,7 @@ const translations = {
     formName: "Your Name", formEmail: "Your Email", formMessage: "Your Message", formButton: "Send Message",
   },
   fr: {
-    navAbout: "À propos", navSkills: "Compétences", navFormation: "Formation", navExperience: "Expérience", 
-    navProjects: "Projets", navContact: "Contact",
+    navAbout: "À propos", navSkills: "Compétences", navFormation: "Formation", navExperience: "Expérience", navProjects: "Projets", navContact: "Contact",
     download: "Télécharger CV",
     heroSubtitle: "Comptable & Administration",
     heroBio: "Plus de 25 ans d'expérience en comptabilité et administration dans diverses entreprises suisses. Trilingue (Français, Allemand, Anglais)",
@@ -39,8 +37,7 @@ const translations = {
     formName: "Votre Nom", formEmail: "Votre Email", formMessage: "Votre Message", formButton: "Envoyer le Message",
   },
   de: {
-    navAbout: "Über mich", navSkills: "Kompetenzen", navFormation: "Ausbildung", navExperience: "Berufserfahrung", 
-    navProjects: "Projekte", navContact: "Kontakt",
+    navAbout: "Über mich", navSkills: "Kompetenzen", navFormation: "Ausbildung", navExperience: "Berufserfahrung", navProjects: "Projekte", navContact: "Kontakt",
     download: "CV herunterladen",
     heroSubtitle: "Buchhalter & Administration",
     heroBio: "Über 25 Jahre Erfahrung in Buchhaltung und Administration in verschiedenen Schweizer Unternehmen. Dreisprachig (Französisch, Deutsch, Englisch)",
@@ -127,40 +124,16 @@ const experienceData = {
 
 const projectsData = {
   en: [
-    { 
-      title: "Couture Martha", 
-      description: "Professional website for sewing, alterations, repairs and bespoke tailoring services in the Geneva, Versoix and Nyon area.", 
-      link: "https://www.couture-martha.ch" 
-    },
-    { 
-      title: "SBB Timetable App", 
-      description: "Contribution to the official Swiss Federal Railways (SBB/CFF) timetable and travel planner application.", 
-      link: "https://www.sbb.ch" 
-    }
+    { title: "Couture Martha", description: "Professional website for sewing, alterations, repairs and bespoke tailoring services in the Geneva, Versoix and Nyon area.", link: "https://www.couture-martha.ch" },
+    { title: "SBB Timetable App", description: "Contribution to the official Swiss Federal Railways (SBB/CFF) timetable and travel planner application.", link: "https://www.sbb.ch" }
   ],
   fr: [
-    { 
-      title: "Couture Martha", 
-      description: "Site web professionnel pour retouches, réparations et confection sur mesure à Genève, Versoix et Nyon.", 
-      link: "https://www.couture-martha.ch" 
-    },
-    { 
-      title: "Application Horaire SBB / CFF", 
-      description: "Contribution au développement et à la maintenance de l'application horaire officielle des Chemins de fer fédéraux suisses (CFF/SBB).", 
-      link: "https://www.sbb.ch" 
-    }
+    { title: "Couture Martha", description: "Site web professionnel pour retouches, réparations et confection sur mesure à Genève, Versoix et Nyon.", link: "https://www.couture-martha.ch" },
+    { title: "Application Horaire SBB / CFF", description: "Contribution au développement et à la maintenance de l'application horaire officielle des Chemins de fer fédéraux suisses (CFF/SBB).", link: "https://www.sbb.ch" }
   ],
   de: [
-    { 
-      title: "Couture Martha", 
-      description: "Professionelle Website für Änderungen, Reparaturen und Maßanfertigungen im Raum Genf, Versoix und Nyon.", 
-      link: "https://www.couture-martha.ch" 
-    },
-    { 
-      title: "SBB Fahrplan App", 
-      description: "Mitarbeit an der offiziellen Fahrplan- und Reiseplaner-App der Schweizerischen Bundesbahnen (SBB/CFF).", 
-      link: "https://www.sbb.ch" 
-    }
+    { title: "Couture Martha", description: "Professionelle Website für Änderungen, Reparaturen und Maßanfertigungen im Raum Genf, Versoix und Nyon.", link: "https://www.couture-martha.ch" },
+    { title: "SBB Fahrplan App", description: "Mitarbeit an der offiziellen Fahrplan- und Reiseplaner-App der Schweizerischen Bundesbahnen (SBB/CFF).", link: "https://www.sbb.ch" }
   ]
 };
 
@@ -416,7 +389,7 @@ export default function MichaelHauckCV() {
         </div>
       </section>
 
-      {/* Professional Experience */}
+      {/* Professional Experience - All 13 entries */}
       <section id="experience" className="py-20 bg-white dark:bg-zinc-900">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16">{t.experienceTitle}</h2>
@@ -445,7 +418,7 @@ export default function MichaelHauckCV() {
         </div>
       </section>
 
-      {/* Projects Section - Your websites */}
+      {/* Projects Section */}
       <section id="projects" className="py-20 bg-zinc-100 dark:bg-zinc-950">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16">{t.projectsTitle}</h2>
