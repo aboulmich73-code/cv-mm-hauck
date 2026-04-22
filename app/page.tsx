@@ -7,7 +7,7 @@ type Lang = "en" | "fr" | "de";
 
 const translations = {
   en: {
-    navAbout: "About", navSkills: "Skills", navFormation: "Formation", navExperience: "Experience", navProjects: "Projects", navContact: "Contact",
+    navAbout: "About", navSkills: "Skills", navFormation: "Formation", navExperience: "Experience", navContact: "Contact",
     download: "Download CV",
     heroSubtitle: "Accountant & Administration",
     heroBio: "Over 25 years of experience in accounting and administration across various Swiss companies. Trilingual (French, German, English)",
@@ -16,13 +16,12 @@ const translations = {
     skillsTitle: "Key Competencies",
     formationTitle: "Formation",
     experienceTitle: "Professional Experience",
-    projectsTitle: "Selected Projects",
     contactTitle: "Contact Me",
     languagesTitle: "Languages",
     formName: "Your Name", formEmail: "Your Email", formMessage: "Your Message", formButton: "Send Message",
   },
   fr: {
-    navAbout: "À propos", navSkills: "Compétences", navFormation: "Formation", navExperience: "Expérience", navProjects: "Projets", navContact: "Contact",
+    navAbout: "À propos", navSkills: "Compétences", navFormation: "Formation", navExperience: "Expérience", navContact: "Contact",
     download: "Télécharger CV",
     heroSubtitle: "Comptable & Administration",
     heroBio: "Plus de 25 ans d'expérience en comptabilité et administration dans diverses entreprises suisses. Trilingue (Français, Allemand, Anglais)",
@@ -31,13 +30,12 @@ const translations = {
     skillsTitle: "Compétences Clés",
     formationTitle: "Formation",
     experienceTitle: "Expérience Professionnelle",
-    projectsTitle: "Projets Sélectionnés",
     contactTitle: "Contactez-moi",
     languagesTitle: "Langues",
     formName: "Votre Nom", formEmail: "Votre Email", formMessage: "Votre Message", formButton: "Envoyer le Message",
   },
   de: {
-    navAbout: "Über mich", navSkills: "Kompetenzen", navFormation: "Ausbildung", navExperience: "Berufserfahrung", navProjects: "Projekte", navContact: "Kontakt",
+    navAbout: "Über mich", navSkills: "Kompetenzen", navFormation: "Ausbildung", navExperience: "Berufserfahrung", navContact: "Kontakt",
     download: "CV herunterladen",
     heroSubtitle: "Buchhalter & Administration",
     heroBio: "Über 25 Jahre Erfahrung in Buchhaltung und Administration in verschiedenen Schweizer Unternehmen. Dreisprachig (Französisch, Deutsch, Englisch)",
@@ -46,7 +44,6 @@ const translations = {
     skillsTitle: "Schlüsselkompetenzen",
     formationTitle: "Ausbildung",
     experienceTitle: "Berufserfahrung",
-    projectsTitle: "Ausgewählte Projekte",
     contactTitle: "Kontakt",
     languagesTitle: "Sprachen",
     formName: "Ihr Name", formEmail: "Ihre E-Mail", formMessage: "Ihre Nachricht", formButton: "Nachricht senden",
@@ -122,27 +119,6 @@ const experienceData = {
   ]
 };
 
-const projectsData = {
-  en: [
-    { title: "SAP S/4HANA Implementation Support", description: "Supported data migration and user training during SAP S/4HANA rollout at Touring Club Suisse.", period: "2017–2018" },
-    { title: "Digital Invoice Processing System", description: "Implemented Verifier + M-Files workflow at Interiman Group, reducing processing time by 40%.", period: "2023–2025" },
-    { title: "Family Allowances & APG Automation", description: "Developed streamlined process for family allowance and loss of earnings compensation requests.", period: "2023–2025" },
-    { title: "Temptraining Reimbursement Platform", description: "Managed integration and processing of training reimbursement requests via dedicated platform.", period: "2023–2025" }
-  ],
-  fr: [
-    { title: "Support à l'implémentation SAP S/4HANA", description: "Support à la migration des données et formation des utilisateurs lors du déploiement SAP S/4HANA au Touring Club Suisse.", period: "2017–2018" },
-    { title: "Système de traitement numérique des factures", description: "Mise en place du workflow Verifier + M-Files chez Interiman Group, réduisant le temps de traitement de 40%.", period: "2023–2025" },
-    { title: "Automatisation des Allocations Familiales & APG", description: "Processus optimisé pour les demandes d'allocations familiales et indemnités APG.", period: "2023–2025" },
-    { title: "Plateforme de remboursement Temptraining", description: "Gestion et intégration des demandes de remboursement de formation via la plateforme dédiée.", period: "2023–2025" }
-  ],
-  de: [
-    { title: "Unterstützung bei SAP S/4HANA Implementierung", description: "Unterstützung bei Datenmigration und Benutzerschulung während des SAP S/4HANA Rollouts beim Touring Club Suisse.", period: "2017–2018" },
-    { title: "Digitales Rechnungsverarbeitungssystem", description: "Einführung des Verifier + M-Files Workflows bei Interiman Group mit 40% Zeitersparnis.", period: "2023–2025" },
-    { title: "Automatisierung Familienzulagen & APG", description: "Optimierter Prozess für Familienzulagen- und APG-Anträge.", period: "2023–2025" },
-    { title: "Temptraining Rückerstattungsplattform", description: "Verwaltung und Integration von Weiterbildungs-Rückerstattungsanträgen.", period: "2023–2025" }
-  ]
-};
-
 const slides = [
   '/photos/slide/abacus.jpg',
   '/photos/slide/calculator.jpg',
@@ -160,7 +136,6 @@ export default function MichaelHauckCV() {
   const t = translations[lang];
   const currentFormation = formationData[lang] || formationData.en;
   const currentExperience = experienceData[lang] || experienceData.en;
-  const currentProjects = projectsData[lang] || projectsData.en;
 
   useEffect(() => {
     if (isPaused) return;
@@ -232,7 +207,6 @@ export default function MichaelHauckCV() {
             <button onClick={() => scrollTo("skills")}>Skills</button>
             <button onClick={() => scrollTo("formation")}>Formation</button>
             <button onClick={() => scrollTo("experience")}>Experience</button>
-            <button onClick={() => scrollTo("projects")}>Projects</button>
             <button onClick={() => scrollTo("contact")}>Contact</button>
 
             <button onClick={toggleTheme} className="p-2 rounded-xl hover:bg-zinc-200 dark:hover:bg-zinc-800 transition">
@@ -287,7 +261,6 @@ export default function MichaelHauckCV() {
               <button onClick={() => { scrollTo("skills"); }} className="text-left py-2">Skills</button>
               <button onClick={() => { scrollTo("formation"); }} className="text-left py-2">Formation</button>
               <button onClick={() => { scrollTo("experience"); }} className="text-left py-2">Experience</button>
-              <button onClick={() => { scrollTo("projects"); }} className="text-left py-2">Projects</button>
               <button onClick={() => { scrollTo("contact"); }} className="text-left py-2">Contact</button>
             </div>
 
@@ -304,7 +277,7 @@ export default function MichaelHauckCV() {
         )}
       </nav>
 
-      {/* Hero */}
+      {/* Hero Section */}
       <section 
         className="relative min-h-screen bg-black flex items-center text-white overflow-hidden"
         onMouseEnter={() => setIsPaused(true)}
@@ -409,7 +382,7 @@ export default function MichaelHauckCV() {
         </div>
       </section>
 
-      {/* Professional Experience */}
+      {/* Professional Experience - All 13 experiences */}
       <section id="experience" className="py-20 bg-white dark:bg-zinc-900">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16">{t.experienceTitle}</h2>
@@ -438,24 +411,8 @@ export default function MichaelHauckCV() {
         </div>
       </section>
 
-      {/* New Projects Section */}
-      <section id="projects" className="py-20 bg-zinc-100 dark:bg-zinc-950">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16">{t.projectsTitle}</h2>
-          <div className="grid md:grid-cols-2 gap-10">
-            {currentProjects.map((project, index) => (
-              <div key={index} className="bg-white dark:bg-zinc-800 p-8 rounded-2xl shadow">
-                <h3 className="text-2xl font-semibold mb-3">{project.title}</h3>
-                <p className="text-sm text-blue-600 mb-4">{project.period}</p>
-                <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">{project.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Contact */}
-      <section id="contact" className="py-20 bg-white dark:bg-zinc-900">
+      <section id="contact" className="py-20 bg-zinc-100 dark:bg-zinc-950">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-12">{t.contactTitle}</h2>
           <div className="max-w-[700px] mx-auto bg-white dark:bg-zinc-800 p-10 rounded-2xl shadow">
