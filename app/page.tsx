@@ -125,15 +125,15 @@ const experienceData = {
 const projectsData = {
   en: [
     { title: "Couture Martha", description: "Professional website for sewing, alterations, repairs and bespoke tailoring services in the Geneva, Versoix and Nyon area.", link: "https://www.couture-martha.ch" },
-    { title: "SBB Timetable App", description: "Contribution to the official Swiss Federal Railways (SBB/CFF) timetable and travel planner application.", link: "https://www.sbb.ch" }
+    { title: "SBB Timetable App", description: "Contribution to the official Swiss Federal Railways (SBB/CFF) timetable and travel planner application.", link: "https://mmhauck.ch/sbb" }
   ],
   fr: [
     { title: "Couture Martha", description: "Site web professionnel pour retouches, réparations et confection sur mesure à Genève, Versoix et Nyon.", link: "https://www.couture-martha.ch" },
-    { title: "Application Horaire SBB / CFF", description: "Contribution au développement et à la maintenance de l'application horaire officielle des Chemins de fer fédéraux suisses (CFF/SBB).", link: "https://www.sbb.ch" }
+    { title: "Application Horaire SBB / CFF", description: "Contribution au développement et à la maintenance de l'application horaire officielle des Chemins de fer fédéraux suisses (CFF/SBB).", link: "https://mmhauck.ch/sbb" }
   ],
   de: [
     { title: "Couture Martha", description: "Professionelle Website für Änderungen, Reparaturen und Maßanfertigungen im Raum Genf, Versoix und Nyon.", link: "https://www.couture-martha.ch" },
-    { title: "SBB Fahrplan App", description: "Mitarbeit an der offiziellen Fahrplan- und Reiseplaner-App der Schweizerischen Bundesbahnen (SBB/CFF).", link: "https://www.sbb.ch" }
+    { title: "SBB Fahrplan App", description: "Mitarbeit an der offiziellen Fahrplan- und Reiseplaner-App der Schweizerischen Bundesbahnen (SBB/CFF).", link: "https://mmhauck.ch/sbb" }
   ]
 };
 
@@ -418,7 +418,7 @@ export default function MichaelHauckCV() {
         </div>
       </section>
 
-      {/* Projects */}
+      {/* Projects Section */}
       <section id="projects" className="py-20 bg-zinc-100 dark:bg-zinc-950">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16">{t.projectsTitle}</h2>
